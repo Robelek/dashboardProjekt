@@ -11,7 +11,7 @@ html
 body
 {
     margin:0;
-    font-size:2rem;
+    font-size:2.3rem;
 }
 img
 {
@@ -33,12 +33,33 @@ img
 .sidebar
 {
     background-color: red;
+    display:flex;
+    flex-direction: column;
 }
-.sidebar-header
+.text-with-icon
 {
     display:flex;
     justify-content: left;
     align-items: center;
+}
+.controls
+{
+    margin-left:1rem;
+    margin-top:1rem;
+    font-size:1.7rem;
+}
+.control-group
+{
+    display:flex;
+    flex-direction: column;
+    gap:0.3rem;
+    margin-top:2rem;
+    
+}
+.sidebar>.controls img
+{
+    height:2rem;
+    width:1.5rem;
 }
 .main
 {
@@ -49,6 +70,8 @@ img
 .main-header
 {
     background-color:rgb(115, 238, 0);
+    display:grid;
+    grid-template-columns: auto 3rem;
 }
 .main-content
 {
