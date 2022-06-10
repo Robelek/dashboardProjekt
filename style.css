@@ -46,6 +46,16 @@ img.profilePicture.big
 {
     height:4rem;
 }
+img.small-button
+{
+    width:2rem;
+    transition: 0.1s;
+}
+img.small-button:hover
+{
+    transition: 0.1s;
+    transform:scale(1.2);
+}
 .dashboard-button
 {
     height:3rem;
@@ -96,6 +106,8 @@ img.profilePicture.big
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     background-color: var(--primary);
     transition: 0.2s;
+
+    padding:0.5rem;
 }
 .control-group>.text-with-icon:hover
 {
@@ -107,6 +119,7 @@ img.profilePicture.big
     height:2rem;
     width:2rem;
 }
+
 .main
 {
     background-color:var(--background);
@@ -134,7 +147,7 @@ img.profilePicture.big
 }
 .annoucements
 {
-    margin:1rem 0;
+    margin:1rem 0rem;
     height: 50%;
     background-color: var(--primary);
 }
@@ -158,6 +171,8 @@ input[type="text"]
 }
 .main-header>.header
 {
+    margin-left:1rem;
+    margin-right:1rem;
     display:flex;
     justify-content: space-between;
     font-size:1.5rem;
@@ -216,6 +231,7 @@ input[type="text"]
 }
 .card
 {
+    position:relative;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     width:20rem;
     height:10rem;
@@ -223,12 +239,19 @@ input[type="text"]
 }
 .card>.text
 {
-    position:relative;
-    top:10%;
+    position:absolute;
+    top:15%;
+    left:1.5rem;
     font-size:1rem;
 }
 .card-controls
 {
+    position:absolute;
+    bottom: 0;
+    right:0;
+    margin-bottom:0.5rem;
+    margin-right:0.5rem;
+
     display:flex;
     gap:0.5rem;
     justify-content: right;
