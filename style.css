@@ -1,11 +1,24 @@
 @font-face {
     font-family: "Roboto";
     src: url("Roboto-Medium.ttf");
+
+}
+@font-face
+{
+    font-family: "Roboto-Bold";
+    src: url("Roboto-Bold.ttf");
+}
+:root
+{
+    --primary: #9BA3EB; 
+    --secondary: #718AF4;
+    --background: #ECEEFF;
+    
 }
 html
 {
     height:100%;
-    background-color: rgb(160, 160, 160);
+    background-color: var(--background);
     font-family: "Roboto", sans-serif;
 }
 body
@@ -13,14 +26,30 @@ body
     margin:0;
     font-size:2.3rem;
 }
+.name
+{
+    font-size:1.4rem;
+    font-family: "Roboto-Bold", sans-serif;
+}
 img
 {
     height:auto;
 }
-.dashboard-button
+img.profilePicture
+{
+    height:3.5rem;
+    width:auto;
+    border-radius: 50%;
+    margin: 0.5rem;
+}
+img.profilePicture.big
 {
     height:4rem;
-    width:3rem;
+}
+.dashboard-button
+{
+    height:3rem;
+    width:auto
 }
 .body-container
 {
@@ -28,11 +57,11 @@ img
     display:grid;
     grid-template-columns: 15rem auto;
     height:100vh;
-    background-color: aqua;
+    background-color: var(--background)
 }
 .sidebar
 {
-    background-color: red;
+    background-color: var(--secondary);
     display:flex;
     flex-direction: column;
 }
@@ -42,53 +71,208 @@ img
     justify-content: left;
     align-items: center;
 }
+.text-with-icon>div>p
+{
+    font-size:1.3rem;
+    line-height: 1rem;
+}
 .controls
 {
     margin-left:1rem;
     margin-top:1rem;
     font-size:1.7rem;
 }
+
 .control-group
 {
     display:flex;
     flex-direction: column;
-    gap:0.3rem;
+    gap:0.7rem;
     margin-top:2rem;
     
+}
+.control-group>.text-with-icon
+{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: var(--primary);
+    transition: 0.2s;
+}
+.control-group>.text-with-icon:hover
+{
+    transform:scale(1.1);
+    transition: 0.2s;
 }
 .sidebar>.controls img
 {
     height:2rem;
-    width:1.5rem;
+    width:2rem;
 }
 .main
 {
-    background-color:blue;
+    background-color:var(--background);
     display:grid;
-    grid-template-rows: 10rem;
+    grid-template-rows: 11rem;
 }
 .main-header
 {
-    background-color:rgb(115, 238, 0);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color:var(--primary);
     display:grid;
-    grid-template-columns: auto 3rem;
+    grid-template-rows:auto auto;
 }
+
 .main-content
 {
-    background-color:rgb(255, 153, 0);
+    background-color:var(--background);
     display:grid;
-    grid-template-columns: auto 15rem;
+    grid-template-columns: auto minmax(15rem, 30%);
 }
 .projects
 {
-    background-color:brown;
+    background-color:var(--background);
     grid-row:1/span 2;
 }
 .annoucements
 {
-    background-color: beige;
+    margin:1rem 0;
+    height: 50%;
+    background-color: var(--primary);
 }
 .trending
 {
-    background-color: aqua;
+    height:50%;
+    background-color: var(--primary)
+}
+.header>.text-with-icon
+{
+    width: min(50rem, 60%);
+}
+input[type="text"]
+{
+    border-radius: 1rem;
+    outline:none;
+    border-width:0px;
+    width:80%;
+    height:1.5rem;
+    font-size:1.1rem;
+}
+.main-header>.header
+{
+    display:flex;
+    justify-content: space-between;
+    font-size:1.5rem;
+}
+.button-holder
+{
+    display:flex;
+    flex-direction: row;
+    margin-left:auto;
+    gap:15px;
+    align-items: center;
+    margin-right:1rem;
+}
+.button
+{
+    background-color: var(--secondary);
+    border: solid 0.2rem rgba(0, 0, 0, 0.103);
+    border-radius: 1rem;
+    padding:0.5rem;
+    transition: 0.2s;
+}
+.button:hover
+{
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+.heading
+{
+    margin-left:1rem;
+    font-size:2rem;
+}
+.line
+{
+    display:inline-block;
+    background-color: yellow;
+    height:100%;
+    width:1rem;
+    float:left;
+}
+.content-right
+{
+    grid-row:1/ span 2;
+    display:flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.card-container
+{
+    
+    margin-left:1rem;
+    display:flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    justify-content: left;
+}
+.card
+{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    width:20rem;
+    height:10rem;
+    background-color: var(--primary);
+}
+.card>.text
+{
+    position:relative;
+    top:10%;
+    font-size:1rem;
+}
+.card-controls
+{
+    display:flex;
+    gap:0.5rem;
+    justify-content: right;
+}
+.annoucements
+{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    height:50%;
+}
+.trending
+{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    height:50%;
+}
+.trending-container
+{
+    border-bottom:0.1rem solid black;
+}
+.annoucements-container
+{
+    font-size:1rem;
+    display:flex;
+    gap:1rem;
+    flex-wrap:wrap;
+}
+.annoucement
+{
+    padding:1rem;
+    background-color: var(--secondary);
+}
+.annoucement-title
+{
+    font-size: 1.3rem;
+   font-family: "Roboto-Bold", sans-serif;
+}
+.annoucement-content
+{
+
+}
+.card-title
+{
+    font-size:1.5rem;
+}
+.icon
+{
+
 }
